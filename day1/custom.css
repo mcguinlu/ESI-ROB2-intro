@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i|IBM+Plex+Mono:400,500);
+@import url(//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css);
+
+body {
+  font-family: 'Fira Sans','Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+}
+
+.remark-slide-content {
+    font-size: 35px;
+    padding: 1em 2.28em 1em 2.28em;
+}
+
+.g {
+  color: green;
+}
+
+.r {
+  color: red;
+}
+
+
+
+.shadeLight {
+  background-color: Gainsboro;
+  width: 70%;
+  position: relative;
+  background-size: auto;
+  display: inline-block;
+}
+
+.tricolumn {
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding-right: 3.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.largest { font-size: 200% }
+.larger { font-size: 130% }
+.small { font-size: 80% }
+
+.tricolhead {
+  background-color: Gainsboro;
+  width: 100%;
+  background-size: contain;
+}
+
+.remark-slide-content {
+  color: #474747;
+  font-weight: 300;
+  font-weight: 300;

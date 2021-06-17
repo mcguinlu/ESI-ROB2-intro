@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Introduction to ROB2: Getting started &amp; Domain 1</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Twitter: @mcguinlu" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <script src="libs/xaringanExtra-webcam/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <script src="libs/xaringanExtra-logo/logo.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction to ROB2:<br>Getting started &amp; Domain 1
+## Luke McGuinness
+### Twitter: <span class="citation">@mcguinlu</span>
+### Department of Population Health Sciences, <br> Bristol Medical School
+### 6th July, 2021
+
+---
+
+
+
+
+
+
+## Overview
+
+2 x `\(\frac{1}{2}\)` days (today and tomorrow)
+
+Session followed by practical
+
+Please add questions to the chat - will take breaks to answer them
+
+
+
+---
+
+## What this course will enable you to do
+
+Understand the __background__ and __motivation__ for the RoB2 tool
+
+--
+
+__Apply the tool__ to an example RCT
+
+--
+
+Explore methods for __visualising__ the assessments and __incorporating__ them into your review
+
+---
+
+class: inverse, center, middle
+
+# Context and motivation
+
+---
+
+## What is bias?
+
+A __systematic error__, or deviation from the truth, in results
+
+Bias is &lt;u&gt;__not__&lt;/u&gt; the same as:
+
+.tricolumn[
+.tricolhead[
+### Imprecision
+]
+.small[
+Random error due to sampling variation
+
+Reflected in the confidence interval
+]
+]
+
+--
+
+.tricolumn[
+.tricolhead[
+### Quality
+]
+.small[
+Bias can occur in &lt;br&gt;well-conducted studies
+
+Not all methodological &lt;br&gt;flaws introduce bias
+]
+]
+
+--
+
+.tricolumn[
+.tricolhead[
+### Reporting
+]
+.small[
+Good methods may have been used but not well reported 
+]
+]
+
+???
+
+The RoB2 tool (and RoB1 tool before it) both seek to measure bias. 
+Other tools assessing trials for systematic reviews frequently assess issues related to imprecision, quality and reporting. 
+
+The team that  developed the RoB2 tool are seeking to assess only bias or “Systematic error”
+
+ Imprecision refers to random error. Each time trialists take a sample and measure outcomes, they will get natural variation from the ‘true’ values in the whole population. 
+The smaller the sample, the more variability. Imprecision is reflected in the confidence interval around the treatment effect. 
+
+Bias is not the same as quality in study conduct:  The RoB team moved substantially away from methods found in other tools – which often assess – methodological quality” of the trial – or “did the trialists do the best they can do..?” 
+Whereas… Bias focuses on “Do I believe the result?”
+The terms “Quality” and “bias” are often used interchangeably, but we are more interested in the believability of the result than criticising the efforts made by study authors. 
+Even a well conducted study can be at risk of bias, for example, in studies where it’s difficult to blind participants and trial personnel - such as  surgical trials – the study may be conducted very well – have “high quality” - but we still acknowledge the possibility that the lack of blinding might affect the study results. 
+
+Also not all markers of “poor conduct” in trials are relevant to bias. For example, failure to perform a sample size calculation, or to obtain ethical approval, are important markers of study quality, but they are unlikely to have direct implications for risk of  bias.
+
+And 
+Bias is not the same as the quality of reporting
+Studies rarely have space to report the methods used in exhaustive detail and may often have used rigorous methods even if they are not described in the published paper. 
+
+Reporting is improving with initiatives like the CONSORT statement. It is important not to discriminate against older trials that were published before these initiatives, and for us to be clear- in our  assessments of bias - in these trials – whether our decisions are based on methods reported in the paper, and when the details are not reported in the trial.. .some tools to assess trials for RCTs have confused these issues
+
+---
+
+## Problems with existing tool
+
+Used simplistically &amp; inconsistently
+
+Modest agreement rates between assessors
+
+No overall risk of bias judgement
+
+???
+
+__1__ Guidance not followed, and domains added or removed
+
+&lt;hr&gt;
+
+__2__ This was partly influence by the overuse of the unclear judgement, which was itself ambiguous.
+
+Can provide references for this if you want
+&lt;hr&gt;
+
+__3__ Problematic if you want to carry result of forward, which we will explore tomorrow afternoon (__SIGNPOST__)
+
+---
+
+## .center[Motivation for ROB2]
+
+&lt;br&gt;
+.pull-left[.center[.larger[More __accurate__]]]
+&lt;br&gt;
+&lt;br&gt;
+???
+__1__ more comprehensive
+more guidance and structure to improve consistency
+versions appropriate to cluster-randomized trials, cross-over trials
+&lt;hr&gt;
+
+--
+.pull-right[.center[.larger[More __usable__]]]
+&lt;br&gt;
+&lt;br&gt;
+???
+???
+__2__
+clearer guidance, in-built help in reaching judgements
+&lt;hr&gt;
+
+--
+
+.pull-left[.center[&lt;br&gt;.larger[More __current__]]]
+&lt;br&gt;
+???
+__3__
+incorporates developments in the science (particularly missing data, unblinded trials)
+
+--
+
+.pull-right[.center[&lt;br&gt;.larger[More __useful__]]]
+
+???
+__4__
+overall risk of bias judgement feeds into sensitivity analyses/exploration of heterogeneity
+allied to ROBINS-I for non-randomized studies
+
+&lt;hr&gt;
+
+---
+
+class: inverse, center, middle
+
+# RoB2 Key Features
+
+---
+
+## RoB2 is a result-focused tool
+
+It assesses a __single outcome__ at a __single timepoint__
+
+&lt;br&gt;
+
+???
+Essentially assessing a single numerical result chosen
+
+
+More specific than study/outcome based
+
+--
+
+.tricolumn[
+.tricolhead[
+### Outcome
+]
+
+Depression
+
+
+]
+
+--
+
+.tricolumn[
+.tricolhead[
+### Measure
+]
+Beck's Depression&lt;br&gt;Inventory
+
+]
+
+--
+
+.tricolumn[
+.tricolhead[
+### Time point
+]
+
+12 weeks
+
+]
+
+---
+
+## Bias in randomised trials
+
+__Hold for diagram__
+
+???
+
+__Note:__ for the purposes of this course, we will be focusing on standard RCTS (rather than cluster or other RCTs)
+
+---
+
+## Domains
+
+All domains are __mandatory__
+
+Additional domains (e.g. "other biases") should not be added
+
+Issues around __funding/COIs __are handled elsewhere
+
+__Reporting biases__ handled elsewhere e.g. ROB-ME
+
+---
+
+## Signalling questions
+
+Reasonably factual __signalling questions__ aim to facilitate judgements and increase transparency
+
+???
+
+Authors encouraged to record rationale and direct quotes
+
+--
+
+Possible responses: .g[‘__Yes__’], .g[‘__Probably yes__’], .r[‘__Probably no__’], .r[‘__No__’], ‘__No information__’
+
+--
+
+__Signalling questions -&gt; domain-level risk of bias judgements__
+
+‘Low risk of bias’ - ‘Some concerns’ - ‘High risk of bias’
+
+---
+
+## Overall risk of bias
+
+.left-column[__Low risk of bias__]
+The study is judged to be at __low risk of bias__ for all domains _for this result_.
+
+???
+
+Overall risk of bias judgement follows from the domain-level judgements (can be over-ridden)
+
+--
+
+.left-column[__Some concerns__&lt;br&gt;&lt;br&gt;]
+
+The study is judged to be at __some concerns__ in at least one domain _for this result_, and no domains are at high risk of bias
+
+
+--
+.left-column[__High risk of bias__&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;]
+
+`#`1 - The study is judged to be at __high risk of bias__ in at least one domain _for this result_.&lt;br&gt;
+--
+`#`2 - The study is judged to have __some concerns__ for multiple domains in a way that substantially lowers confidence _in this result_.
+
+???
+
+__SIGNPOST:__ When I say there are two ways to get there, I talking about the algorithms that we use to go from domain level judgements to overall judgements.p
+
+---
+
+## Preliminary considerations
+
+Hold for two images
+
+---
+
+class: inverse, center, middle
+
+# Domain 1: Bias arising from the randomisation process 
+
+---
+
+## Signalling questions
+
+.left-column[Methods&lt;br&gt;used&lt;br&gt;&lt;br&gt;&lt;br&gt;]
+__1.1__ Was the allocation sequence random?&lt;br&gt;
+--
+__1.2__ Was the allocation sequence concealed until participants were enrolled and assigned to interventions?
+
+--
+
+.left-column[Additional&lt;br&gt;evidence of&lt;br&gt;problems&lt;br&gt;]
+
+__1.3__ Did baseline differences between intervention groups suggest a problem with the randomization process?
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="cols_macro.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"ratio": "16:9",
+"highlightSpans": true,
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
