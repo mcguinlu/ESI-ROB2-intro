@@ -1,0 +1,18 @@
+---
+title: "<div align=\"center\">ESI Introduction to ROB2 </div>"
+output: html_document
+---
+
+
+## Day 1
+
+[Session 1 Slides](https://mcguinlu.github.io/ESI-ROB2-intro/day1/session1.html)
+
+
+
+## Resources
+
+<a href="https://mcguinlu.github.io/ESI-ROB2-intro/resources/ROB2_Intro_LAM2.docx" download>Download programme</a>
+
+
+
