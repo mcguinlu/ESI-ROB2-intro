@@ -11,7 +11,7 @@ output:
 
 I am very much looking forward to meeting you all in early July!
 
-__Note that while there are no formal prerequisites for this course__, I would encourage you to familiarise yourself with the example RCT we will be using throughout (see the [Course Resources](#demo) section). There will be (limited) time to read the paper on the day, but I would strongly recommend doing so in advance, as that will allow you to jump straight into applying the RoB2 tool.
+__Note that while there are no formal prerequisites for this course__, I would encourage you to familiarise yourself with the example RCT we will be using throughout (see the [Course Resources](#demo) section). There will be (limited) time to read the paper on the day, but doing so in advance will allow you to jump straight into applying the RoB2 tool.
 
 <hr>
 
@@ -45,7 +45,7 @@ Over the course of the two days, we will assess an example published RCT using t
 
 __Citation:__ Krogh, Jesper, Bengt Saltin, and Merete Nordentoft. "The DEMO trial: a randomized, parallel-group, observer-blinded clinical trial of strength versus aerobic versus relaxation training for patients with mild to moderate depression." _The Journal of Clinical Psychiatry_ 70.6 (2009): 790-800.
 
-[Protocol (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/DEMO_Protocol_Krogh_2007.pdf) | [Paper (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/DEMO_Trial_Krogh_2007.pdf) 
+[Protocol (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/DEMO_Protocol_Krogh_2007.pdf) | [Paper (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/DEMO_Trial_Krogh_2009.pdf) 
 
 <br>
 
