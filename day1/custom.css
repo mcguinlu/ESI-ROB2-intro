@@ -18,8 +18,6 @@ body {
   color: red;
 }
 
-
-
 .shadeLight {
   background-color: Gainsboro;
   width: 70%;
@@ -52,7 +50,33 @@ body {
   background-size: contain;
 }
 
+
+.box {
+  background-color: #e1e1e1;
+  width: 100%;
+  background-size: contain;
+  text-align: center;
+  font-size: 130%;
+  padding: 2px;
+}
+
 .remark-slide-content {
   color: #474747;
   font-weight: 300;
   font-weight: 300;
+}
+
+
+.footer {
+    position: absolute;
+    text-align: right;
+    bottom: 10px;
+    font-size: 70%;
+    right: 5px;
+    height: 25px;
+    width: 100%;
+}
+
+.large {
+  font-size: 40px;
+}

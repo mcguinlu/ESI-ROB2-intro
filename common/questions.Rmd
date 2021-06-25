@@ -1,0 +1,10 @@
+class: middle, center
+
+.pull-left[ ![](../images/questions.jpg) ]
+
+.pull-right[
+<br>
+<br>
+<br>
+.largest[__Questions?__]
+]

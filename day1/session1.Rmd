@@ -36,6 +36,8 @@ xaringanExtra::use_xaringan_extra(c("tile_view", "webcam"))
 xaringanExtra::use_editable(expires = 1)
 ```
 
+class: large
+
 ## Overview of this course
 
 2 x $\frac{1}{2}$ days 
@@ -54,7 +56,7 @@ Session introducing domain, followed by practical to apply it
 
 --
 
-Slides/Materials:
+Slides/Materials: __hold for link__
 
 ???
 
@@ -64,9 +66,13 @@ Available from
 
 Questions
 
+???
+
 Please add questions to the chat - will take breaks to answer them
 
 ---
+
+class: large
 
 ## What this course will enable you to do
 
@@ -80,7 +86,6 @@ __Apply the tool__ to an example RCT
 
 Explore methods for __visualising__ the assessments and __incorporating__ them into your review
 
-.can-edit[test]
 
 ---
 
@@ -93,6 +98,8 @@ class: inverse, center, middle
 ## What is bias?
 
 A __systematic error__, or deviation from the truth, in results
+
+--
 
 Bias is <u>__not__</u> the same as:
 
@@ -155,14 +162,42 @@ Studies rarely have space to report the methods used in exhaustive detail and ma
 Reporting is improving with initiatives like the CONSORT statement. It is important not to discriminate against older trials that were published before these initiatives, and for us to be clear- in our  assessments of bias - in these trials – whether our decisions are based on methods reported in the paper, and when the details are not reported in the trial.. .some tools to assess trials for RCTs have confused these issues
 
 ---
+class: center, middle
 
-## Problems with existing tool
+
+.largest[__Bias__]
+
+.larger[wrong answer to the right question]
+
+
+
+.largest[
+$\neq$
+]
+
+
+
+.largest[__Generalisability / Indirectness__]
+
+.larger[right answer to the wrong question]
+
+
+???
+
+Bias also not the same as concerns re generalisability
+
+Indirectness = just because you are not studying the population of interest, doesn't mean the answer is biased.
+
+---
+class: large
+
+## Problems with existing tool (RoB 1)
 
 Used simplistically & inconsistently
 
 Modest agreement rates between assessors
 
-No overall risk of bias judgement
+No __overall__ risk-of-bias judgement
 
 ???
 
@@ -278,11 +313,32 @@ Beck's Depression<br>Inventory
 
 ## Bias in randomised trials
 
-__Hold for diagram__
+![](../images/domains_overview_no_rob.png)
 
 ???
 
-__Note:__ for the purposes of this course, we will be focusing on standard RCTS (rather than cluster or other RCTs)
+Bias introduced through conduct/dissemination of results
+
+These aspects are based on empirical research and theory
+
+May be familiar, but worth checking how they are defined within the RoB 2 tool
+
+__Note:__ Only for RCTs - for non-randomised studies, check ROBINS-I
+
+__Note:__ for the purposes of this course, we will be focusing on standard RCTS (rather than cluster or other RCTs).
+
+There are additional issues in cross-over trials and cluster-randomized trials, and different versions of RoB 2 have been developed for these designs.
+
+
+---
+
+## Bias in randomised trials
+
+![](../images/domains_overview.png)
+
+???
+
+Domains map onto the elements or domains of bias
 
 ---
 
@@ -298,9 +354,23 @@ __Reporting biases__ handled elsewhere e.g. ROB-ME
 
 ---
 
+## Comparison with RoB 1 Domains
+
+__Hold for table__
+
+---
+
+## The effect of interest
+
+
+
+---
+
 ## Signalling questions
 
 Reasonably factual __signalling questions__ aim to facilitate judgements and increase transparency
+
+__Example:__ Was the allocation sequence random?
 
 ???
 
@@ -310,17 +380,35 @@ Authors encouraged to record rationale and direct quotes
 
 Possible responses: .g[‘__Yes__’], .g[‘__Probably yes__’], .r[‘__Probably no__’], .r[‘__No__’], ‘__No information__’
 
+---
+
+## Domain-level judgements
+
+Possible judgements:
+* .g[‘Low risk of bias’]
+* ‘Some concerns’
+* .r[‘High risk of bias’]
+
+???
+
 --
 
-__Signalling questions -> domain-level risk of bias judgements__
+__Algorithms__ provided suggested domain-level judgements
 
-‘Low risk of bias’ - ‘Some concerns’ - ‘High risk of bias’
+???
+
+Based on responses to signalling questions. We'll introduce these in greater detail later.
+
+--
+
+.box[Suggested risk-of-bias judgements can be over-ridden
+]
 
 ---
 
 ## Overall risk of bias
 
-.left-column[__Low risk of bias__]
+.left-column[.g[__Low risk of bias__]]
 The study is judged to be at __low risk of bias__ for all domains _for this result_.
 
 ???
@@ -335,7 +423,7 @@ The study is judged to be at __some concerns__ in at least one domain _for this 
 
 
 --
-.left-column[__High risk of bias__<br><br><br><br><br>]
+.left-column[.r[__High risk of bias__<br><br><br><br><br>]]
 
 `#`1 - The study is judged to be at __high risk of bias__ in at least one domain _for this result_.<br>
 --
@@ -359,6 +447,149 @@ class: inverse, center, middle
 
 ---
 
+Use overview of trial image here to keep people together
+
+---
+
+# Why is randomization important?
+
+Bias introduced when **factors that influence the outcome** predict:
+
+.pull-left[
+
+
+.center[__Enrolment__]
+
+<br>
+
+![](../images/d1_enrol.png)
+]
+
+???
+
+Factors could be severity of illness or presence of comorbidites
+
+Knowledge of the next assignment could lead to people being excluded on the basis of factors
+
+<hr>
+
+--
+
+.pull-right[
+.center[__Allocation__]
+
+<br>
+
+
+![](../images/d1_alloc.png)
+]
+
+
+???
+
+Essentially looking for two groups that "look the same at baseline", which means people 
+
+Re-introducing confounding, where a characteristic of the patient predicts their treatment and outcome
+
+The enrolment here is a type of selection bias
+
+while the a
+
+---
+
+<!-- TODO Check spelling of randomisation throughout -->
+
+
+# Randomization: two-step process
+
+<br>
+
+.larger[
+__Generate__ an unbiased allocation sequence
+]
+
+<br>
+
+???
+
+* Good: computer algorithm, random tables
+* Not so good: random numbers, dates, patient records numbers
+
+--
+
+.larger[
+__Conceal__ the allocation sequence
+]
+???
+* Good: Central randomisation, sequentially numbered opaque envelopes/drug containers
+* Not so good: transparent envelopes/containers
+
+---
+
+## Why look for baseline imbalances?
+
+.footer[_Ranapurwala et al. (2016) doi:10.1093/ije/dyv292_]
+
+Assessing impact of pre-dive checklist on scuba diving incidents
+
+--
+
+.pull-left[__Methods:__ "...the interns were only allowed to allocate the envelopes in a predetermined randomized order. They did not know which envelope was intervention or control until they opened it on subsequent recruitment days."]
+
+--
+
+.pull-right[![](../images/d1_baseline.png)]
+
+???
+
+Trial assessing effect of pre-dive checklist on scuba diving accidents
+
+Sometimes methods described are good, but results show that there was a problem
+
+Purpose of the extra question is the assess this.
+
+---
+
+# Baseline imbalances
+
+Can __occasionally__ indicate problems with randomisation
+
+* Major differences between __group sizes__
+
+* __Excess__ of statistically significant baseline differences
+
+--
+
+.box[
+Baseline imbalances __consistent with chance__ do<br> not indicate problems with randomisation
+]
+
+---
+
+.box[
+If 20 variables were measured at baseline, would you expect at least one variable to have an imbalance resulting in a P-value < 0.05?
+]
+
+--
+
+<br>
+
+.left-column[![](../images/tick.png)]
+
+.larger[__Yes__, assuming the variables are not correlated, we expect 1 in 20 tests to give a P-value < 0.05
+]
+
+???
+
+Important to remember this, as often studies report a lot of baseline comparisons.
+
+---
+
+# Example from s
+
+---
+
+
 ## Signalling questions
 
 .left-column[Methods<br>used<br><br><br>]
@@ -371,6 +602,42 @@ __1.2__ Was the allocation sequence concealed until participants were enrolled a
 .left-column[Additional<br>evidence of<br>problems<br>]
 
 __1.3__ Did baseline differences between intervention groups suggest a problem with the randomization process?
+
+---
+
+
+class: middle, center
+
+.pull-left[ ![](../images/questions.jpg) ]
+
+.pull-right[
+<br>
+<br>
+<br>
+.largest[__Questions?__]
+]
+
+---
+
+# Example RCT
+
+---
+
+# The DEMO trial
+
+A Randomized, Parallel-Group, Observer-Blinded Clinical Trial of Strength Versus Aerobic Versus Relaxation Training for Patients With Mild to Moderate Depression
+
+__P:__ Patients with mild to moderate depression  
+__I:__  4 months of aerobic OR strength training   
+__C:__ 4 months of relaxation training
+__O:__ Depressive symptoms, Absence from work, Cognitive function, Physical outcomes
+
+.footer[*Krogh et al. (2009) doi: 10.4088/jcp.08m04241*]
+
+???
+
+Outcome and comparator were delivered twice weekly
+
 
 
 

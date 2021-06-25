@@ -1,18 +1,39 @@
 ---
 title: "<div align=\"center\">ESI Introduction to ROB2 </div>"
-output: html_document
+output: 
+  html_document:
+    css: day1/custom.css
 ---
+
+## Welcome to this course!
+
 
 
 ## Day 1
 
-[Session 1 Slides](https://mcguinlu.github.io/ESI-ROB2-intro/day1/session1.html)
+Slides for the Day 1 sessions will be made available here on July 6th 2021.
 
+<!-- [Session 1 slides](https://mcguinlu.github.io/ESI-ROB2-intro/day1/session1.html) -->
 
+<!-- [Session 2 slides](https://mcguinlu.github.io/ESI-ROB2-intro/day1/session1.html) -->
+
+## Day 2
+
+Slides for the Day 2 sessions will be made available here on July 7th 2021.
+
+<!-- [Session 3 slides](https://mcguinlu.github.io/ESI-ROB2-intro/day1/session3.html) -->
+
+<!-- [Session 4 slides](https://mcguinlu.github.io/ESI-ROB2-intro/day1/session4.html) -->
 
 ## Resources
 
-<a href="https://mcguinlu.github.io/ESI-ROB2-intro/resources/ROB2_Intro_LAM2.docx" download>Download programme</a>
+[Download course programme](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Intro_ESI_Programme.docx)
 
+[RoB 2 Website](https://www.riskofbias.info/welcome/rob-2-0-tool)
 
+[Download RoB 2 Guidance Document](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Full_Guidance.pdf)
+
+[Download RoB 2 Cribsheet](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Cribsheet.pdf)
+
+[Download RoB 2 Template](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Template.docx)
 
