@@ -27,13 +27,13 @@ Slides for the Day 2 sessions will be made available here on July 7th 2021.
 
 ## Resources
 
-[Download course programme](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Intro_ESI_Programme.docx)
+[Course programme (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Intro_ESI_Programme.pdf)
 
 [RoB 2 Website](https://www.riskofbias.info/welcome/rob-2-0-tool)
 
-[Download RoB 2 Guidance Document](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Full_Guidance.pdf)
+[RoB 2 Guidance Document (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Full_Guidance.pdf)
 
-[Download RoB 2 Cribsheet](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Cribsheet.pdf)
+[RoB 2 Cribsheet (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Cribsheet.pdf)
 
-[Download RoB 2 Template](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Template.docx)
+[RoB 2 Template (Word)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Template.docx)
 
