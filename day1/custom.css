@@ -18,6 +18,10 @@ body {
   color: red;
 }
 
+.sc {
+  color: #e2c10a;
+}
+
 .shadeLight {
   background-color: Gainsboro;
   width: 70%;
