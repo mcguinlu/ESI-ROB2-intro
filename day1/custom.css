@@ -84,3 +84,7 @@ body {
 .large {
   font-size: 40px;
 }
+
+.right-column {
+    padding-top: 0em;
+}
