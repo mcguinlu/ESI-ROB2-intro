@@ -1356,7 +1356,7 @@ Stated in paper: “Physiotherapists were not blinded”
 
 ---
 
-## Q 2.3
+## Q 2.3 If .r[Y/PY]/NI to 2.1 or 2.2: Were there deviations from the intended intervention that arose because of the trial context?
 
 --
 

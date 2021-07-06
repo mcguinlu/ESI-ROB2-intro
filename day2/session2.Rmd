@@ -1,0 +1,502 @@
+---
+title: "Introduction to Risk of Bias 2"
+subtitle: "Luke McGuinness"
+author: "Twitter: @mcguinlu"
+institute: "Department of Population Health Sciences, <br> Bristol Medical School"
+date: "6th July, 2021"
+output:
+  xaringan::moon_reader:
+    css: [default, hygge, custom.css]
+    lib_dir: libs
+    nature:
+      beforeInit: "cols_macro.js"
+      highlightStyle: github
+      ratio: '16:9'
+      highlightSpans: true
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(include = FALSE)
+```
+
+``` {r, echo = FALSE, message = FALSE}
+htmltools::includeCSS("https://raw.githubusercontent.com/malcolmbarrett/kakashi/master/kakashi.css")
+library(medrxivr)
+cache <- TRUE
+library(dplyr)
+xaringanExtra::use_xaringan_extra(c("tile_view", "webcam"))
+xaringanExtra::use_editable(expires = 1)
+```
+
+class: inverse, center, middle
+
+# Domain 3: <br>Bias due to missing outcome data
+
+---
+
+class: center, middle
+
+![](../images/domains_overview_d3.png)
+
+---
+
+## Missing outcome data
+
+Several causes of missing outcome data:
+
+* Participant __withdrew__, cannot be __found__ or __died__
+
+* Participant __did not attend__ study visit at which outcome was measured
+
+* Data __lost__ or __unavailable__
+
+???
+
+Touched on this issues yesterday
+
+Exclusions from analysis for reasons other than missing data should be dealt with in domain two.
+
+E.g. if patient has outcome data but did not attend all sessions and so was excluded from the analyses
+
+---
+
+## When is missing data an issue?
+
+
+
+Example: 
+
+---
+
+## Four scenarios
+
+.left-column[**No bias**]
+
+
+.right-column[Missingness unrelated to true values]
+
+???
+
+E.g. data missing because automatic measuring device failed for subset of participants
+
+<hr>
+
+--
+
+.left-column[<br>**Bias**]
+
+.right-column[<br>Missingness depends on true values and on intervention group]
+
+<br>
+
+
+???
+
+Those with continuing symptoms more likely to drop out (reflects the true value, e.g. more depression) __AND__
+
+more drop-outs in experimental group due to side effects 
+
+<hr>
+
+--
+
+.left-column[<br><br>**No bias**__*__]
+
+.right-column[<br>Missingness depends on true values but things are identical in both groups]
+
+.footer[__*__ Slightly more complicated - see RoB 2 guidance]
+
+
+???
+
+Those with continuing symptoms more likely to drop out (reflects the true value, e.g. more depression) __AND__
+
+the experimental intervention has no effect
+
+<hr>
+
+--
+
+.left-column[<br><br>**Likely bias**__*__]
+
+.right-column[<br>Missingness depends on true values and effects of intervention and comparator differ]
+
+???
+
+Those with continuing symptoms more likely to drop out __AND__
+
+the experimental intervention has an effect
+
+<hr>
+
+Not an easy area to consider
+
+__*__ More complicated than this - see RoB2 guidance!
+
+---
+
+## What proportion of missingness is an issue?
+
+No hard and fast rule for allowable proportion of missing outcome data
+
+???
+
+If missing outcome data is causing bias, strength of bias will increase as amount of missing outcome data increases
+
+---
+
+
+
+---
+
+## Signalling questions
+
+.left-column[
+Any missing data?
+<br>
+
+Robust results?
+<br>
+
+Missingness depends on result?
+
+]
+
+.right-column[
+**3.1** Were data for this outcome available for all, or nearly all, participants randomized?
+
+**3.2** If .r[N/PN]/NI to 3.1: Is there evidence that the result was not biased by missing outcome data?
+
+**3.3** If .r[N/PN] to 3.2: Could missingness in the outcome depend on its true value?  
+**3.4** If .r[Y/PY]/NI to 3.3: Is it likely that missingness in the outcome depended on its true value?
+]
+
+---
+
+class: center, middle
+
+## Domain 3 Algorithm
+
+![](../images/algorithmd3.jpg)
+???
+
+If outcome data available, fail fast to "Low risk"
+
+---
+
+class: middle, center
+
+.pull-left[ ![](../images/questions.jpg) ]
+
+.pull-right[
+<br>
+<br>
+<br>
+.largest[__Questions?__]
+]
+
+---
+
+class: inverse, center, middle
+
+# Domain 4: <br> Bias in measurement of the outome
+
+---
+
+class: center, middle
+
+![](../images/domains_overview_d4.png)
+---
+
+# Signalling questions
+
+---
+
+class: center
+
+## Domain 4 Algorithm
+
+![](../images/algorithmd4.jpg)
+
+---
+
+class: inverse, middle, center
+
+# Suggested reponses for Domain 3
+
+---
+
+## Q 3.1 Were data for this outcome available for all, or nearly all, participants randomized?
+
+--
+
+**Response:** .r[__No__]
+
+--
+
+**Judgement:** At 4 months, missing data for 7 patients in the aerobic group (5 lost to follow-up, 2 refused to participate) and 13 patients in the relaxation group (9 lost to follow-up, 4 refused to participate). This is quite a large proportion of both groups, and higher in the relaxation group.
+
+???
+
+Note: imputed data should be regarded as missing data, and not considered as ‘outcome data’ in the context of this question.
+
+---
+
+## Q 3.2 If .r[N/PN]/NI to 3.1: Is there evidence that the result was not biased by missing outcome data?
+
+--
+
+**Response:** .r[__No__]
+
+--
+
+**Judgement:** No sensitivity analyses are presented, but were planned according to the protocol. 
+
+???
+
+Note that imputing the outcome variable, either through methods such as ‘last-observation-carried-forward’ or via multiple imputation based only on intervention group, should not be assumed to correct for bias due to missing outcome data.
+
+---
+
+## Q 3.3 If .r[N/PN] to 3.2: Could missingness in the outcome depend on its true value?
+
+--
+
+**Response:** .r[__Yes__]
+
+--
+
+**Judgement:**
+
+---
+
+## Q 3.4 If .r[Y/PY]/NI to 3.3: Is it likely that missingness in the outcome depended on its true value?
+
+--
+
+**Response:** .r[__Probably Yes__]
+
+--
+
+**Judgement:** More people were missing in the relaxation group. It is plausible – and indeed we regard it as quite likely – that people allocated to this group were missing because their depression remained the same or got worse.
+
+But you may disagree and judge this to be .g[__Probably No__]
+
+---
+
+class: center, middle
+
+![](../images/algorithmd3.jpg)
+<br>
+
+Domain-level judgement: .r[**High**]
+
+---
+
+class: inverse, middle, center
+
+# Suggested reponses for Domain 4
+
+---
+
+## Q 4.1 Was the method of measuring the outcome inappropriate?
+
+--
+
+**Response:** .g[__No__]
+
+--
+
+**Judgement:** Beck Depression Inventory (BDI) is a widely used instrument for measuring the degree of depression.
+
+---
+
+## Q 4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?
+
+--
+
+**Response:** .g[__No__]
+
+--
+
+**Judgement:** There is no indication that measurement of the outcome differed between intervention groups.
+
+---
+
+## Q 4.3 If .g[N/PN]/NI to 4.1 and 4.2: Were outcome assessors aware of the intervention received by study participants?
+
+--
+
+**Response:** .r[__Yes__]
+
+--
+
+**Judgement:** “The patient administered Becks Depression Inventory scale, which consists of 21 items that each can be scored from 0 to 3, is also included.”. (Protocol/design paper)
+Patients were aware of their intervention allocation.
+
+---
+
+## Q 4.4 If /r[Y/PY]/NI to 4.3: Could assessment of the outcome have been influenced by knowledge of intervention received?
+
+--
+
+**Response:** .r[__Yes__]
+
+--
+
+**Judgement:** Knowledge of the assigned intervention could influence participant-reported outcomes such as depressive symptoms.
+
+---
+## Q 4.5 If .r[Y/PY]/NI to 4.4: Is it likely that assessment of the outcome was influenced by knowledge of intervention received?
+
+--
+
+**Response:** .g[__Probably No__]
+
+--
+
+**Judgement:** I think that it is unlikely that patients would complete the Beck Depression Inventory differently according to their assigned intervention.
+
+But you may disagree and judge this to be .r[__Probably Yes__]
+
+---
+
+class: center, middle
+
+![](../images/algorithmd4.jpg)
+
+Domain-level judgement: .sc[**Some concerns**]
+
+---
+
+class: inverse, center, middle
+
+# Domain 5:  <br>Bias in the selection of the reported result
+
+---
+
+class: center, middle
+
+![](../images/domains_overview_d5.png)
+
+---
+
+## Signalling questions
+
+**5.1** Were the data that produced this result analysed in accordance with a pre-specified analysis plan that was finalized before unblinded outcome data were available for analysis?
+
+<br>
+Is the numerical result being assessed likely to have been selected, on the basis of the results, from ...
+
+**5.2** ... multiple eligible outcome measurements (e.g. scales, definitions, time points) within the outcome domain?
+
+**5.3** ... multiple eligible analyses of the data?
+
+
+---
+
+class: center, middle
+
+## Domain 5 Algorithm
+
+![](../images/algorithmd5.jpg)
+
+---
+
+class: inverse, middle, center
+
+# Suggested reponses for Domain 5
+
+---
+
+## Q 5.1 Were the data that produced this result analysed in accordance with a pre-specified analysis plan that was finalized before unblinded outcome data were available for analysis?
+
+--
+
+**Response:** .g[__Probably Yes__]
+
+--
+
+**Judgement:** The protocol (design paper) appears to provide a pre-specified analysis plan. 
+
+But concerns over timing of protocol submission
+
+???
+
+Protocol paper submitted for publication in August 2005 and accepted in July 2006, whereas recruitment to the trial took place from January 2005 to July 2006. 
+
+It is possible that the document was edited to react to seeing results. 
+
+However, here we presume that such edits were not made.
+
+---
+
+## Q 5.2 Is the numerical result being assessed likely to have been selected, on the basis of the results, from multiple eligible outcome measurements (e.g. scales, definitions, time points) within the outcome domain?
+
+--
+
+**Response:** .g[__No__]
+
+--
+
+**Judgement:** These were pre-specified in the design paper and presented in the paper.
+
+---
+
+## Q 5.3 Is the numerical result being assessed likely to have been selected, on the basis of the results, from multiple eligible analyses of the data?
+ 
+--
+ 
+**Response:** .g[__Probably No__]
+
+--
+
+**Judgement:** There is indication of multiple analyses of the data, and the analysis method used for this outcome in the full trial report matches that in the design paper.
+
+---
+
+class: center, middle
+
+![](../images/algorithmd5.jpg)
+<br>
+
+Domain-level judgement: .g[**Low**]
+
+---
+
+class: inverse, middle, center
+
+# Overall RoB and <br> Integration into Synthesis
+
+---
+
+## Incorporating bias assessments in analyses
+
+
+“ It is not appropriate to present analyses and interpretations while ignoring flaws identified during the assessment of risk of
+bias”
+
+???
+
+__Cochrane Handbook, Chapter 7__
+
+--
+
+Suggested approaches:
+
+1) Primary analysis restricted to studies at low risk of bias (or low + some concerns)
+
+2) Present multiple (stratified) analyses / Explore the impact of RoB
+
+3) Present all studies and provide a narrative discussion 
+
+---
+
