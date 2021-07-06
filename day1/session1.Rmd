@@ -1110,10 +1110,6 @@ However, need to remember that blinding may not be successful in practice
 
 ---
 
-Add extra two slides on blinding here
-
----
-
 ## Element 3a: Appropriate analysis for effect of assignment
 
 To estimate the effect of assignment to intervention, we should use an ‘intention-to-treat’ (ITT) analysis:
