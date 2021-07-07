@@ -25,12 +25,7 @@ __Note that while there are no formal prerequisites for this course__, I would e
 
 #### Day 2
 
-Slides for the Day 2 sessions will be made available here on July 7th 2021.
-
-<!-- [Session 3 slides](https://mcguinlu.github.io/ESI-ROB2-intro/day1/session3.html) -->
-
-<!-- [Session 4 slides](https://mcguinlu.github.io/ESI-ROB2-intro/day1/session4.html) -->
-
+[Session slides](https://mcguinlu.github.io/ESI-ROB2-intro/day2/session2.html)
 
 <hr>
 ### Course Resources

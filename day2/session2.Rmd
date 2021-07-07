@@ -56,9 +56,6 @@ Covered:
 
 * Domain 2: issues with deviations from intended interventions
 
-
-
-
 ---
 
 class: inverse, center, middle
@@ -79,14 +76,6 @@ Several causes of missing outcome data:
 
 * Participant __withdrew__, cannot be __found__ or __died__
 
---
-
-* Participant __did not attend__ study visit at which outcome was measured
-
---
-
-* Data __lost__ or __unavailable__
-
 ???
 
 Touched on this issues yesterday
@@ -94,6 +83,14 @@ Touched on this issues yesterday
 Exclusions from analysis for reasons other than missing data should be dealt with in domain 2.
 
 E.g. if patient has outcome data but did not attend all sessions and so was excluded from the analyses
+
+--
+
+* Participant __did not attend__ study visit at which outcome was measured
+
+--
+
+* Data __lost__ or __unavailable__
 
 ---
 
@@ -121,6 +118,8 @@ If participants who are suffering more from dementia (true value of the outcome)
 
 missingness of the dementia outcome depends on it's true value
 
+<hr>
+
 --
 
 * whether missingness is related to the __intervention group__
@@ -128,6 +127,8 @@ missingness of the dementia outcome depends on it's true value
 ???
 
 E.g. are side-effects, which cause participants to drop out, more likely in the intervention group?
+
+<hr>
 
 --
 
@@ -219,9 +220,11 @@ Can use other sources of evidence:
 
 ???
 
-E.g. if reasons for drop-out are recorded, then this can provide evidence that missingness is related to true value
+If reasons for drop-out are recorded, then this can provide evidence that missingness is related to true value
 
 E.g. if in alcohol trial of maintaining sobriety, if people are placed in rehab and so can't attend follow-up, this reason shows missingness is related to sobriety result.
+
+<hr>
 
 --
 
@@ -252,13 +255,33 @@ If model is incorrectly specified, can cause issues and even increase bias
 ## Sensitivity analyses
 
 
-Sensitivity analyses make assumptions about the relationship between outcome missingness and the true value
+Assumes something about the relationship between:
 
-If the results do not change under different __assumptions__ about missing outcome data, then risk of bias will be .g[**Low**]
+<br>
+
+.center[__outcome missingness -> true value__]
+
+<br>
+
+If results robust, risk of bias will be .g[**Low**]
 
 ???
 
+If the results do not change under different __assumptions__ about missing outcome data, then
+
 Focus on assumptions, because more interested in what the authors thought were the range of reasonable values than what they actually did
+
+---
+
+## Result-based assessments
+
+Domain is a good example of the motivation for __result-based assessments__
+
+<br>
+
+.box[
+__Bias due to missing data can work differently at different time-points__
+]
 
 ---
 
@@ -366,11 +389,15 @@ class: center, middle
 
 ## Bias in measurement of the outcome
 
-Occurs when measured value $\neq$ true value
+Occurs when __measured value__ $\neq$ __true value__
 
 Can be __differential__ or __non-differential__
 
-Common terms include measurement error and misclassification
+__Common terms:__
+
+* measurement error
+
+* misclassification
 
 ???
 
@@ -392,7 +419,7 @@ E.g. blood pressure (if device is broken)
 
 --
 
-Impact on different outcome types:
+Impact on __different outcome__ types:
 
 * Continuous: __No bias__
 * Dichotomous/categorical: __Bias towards the null__
@@ -414,6 +441,8 @@ E.g. depression assessed as lower in intervention
 --
 
 Only possible if assessors are __aware of the intervention received__
+
+--
 
 <br>
 
@@ -437,7 +466,7 @@ background-image: url("../images/blinding_effect.jpg")
 
 ## Blinding of outcome assessors
 
-Not always __feasible__, e.g. patient reported outcomes
+Not always __feasible__, e.g. _patient reported outcomes_
 
 <br>
 
@@ -563,6 +592,19 @@ Note the only way to get to Low is if blinding was good
 
 ---
 
+class: middle, center
+
+.pull-left[ ![](../images/questions.jpg) ]
+
+.pull-right[
+<br>
+<br>
+<br>
+.largest[__Questions?__]
+]
+
+---
+
 class: inverse, middle, center
 
 # Suggested reponses for Domain 3
@@ -609,7 +651,7 @@ Note that imputing the outcome variable, either through methods such as ‘last-
 
 --
 
-**Judgement:**
+**Judgement:** Not an objective outcome
 
 ---
 
@@ -621,7 +663,7 @@ Note that imputing the outcome variable, either through methods such as ‘last-
 
 --
 
-**Judgement:** More people were missing in the relaxation group. It is plausible – and indeed we regard it as quite likely – that people allocated to this group were missing because their depression remained the same or got worse.
+**Judgement:** More people were missing in the relaxation group. Possible that people allocated to this group were missing because their depression remained the same or got worse.
 
 But you may disagree and judge this to be .g[__Probably No__]
 
@@ -679,7 +721,7 @@ Patients were aware of their intervention allocation.
 
 ---
 
-## Q 4.4 If /r[Y/PY]/NI to 4.3: Could assessment of the outcome have been influenced by knowledge of intervention received?
+## Q 4.4 If .r[Y/PY]/NI to 4.3: Could assessment of the outcome have been influenced by knowledge of intervention received?
 
 --
 
@@ -724,12 +766,203 @@ class: center, middle
 
 ---
 
+# Selective reporting vs selective non-reporting
+
+__Selective reporting__ (ROB2 Domain 5):
+
+.center[
+
+_Single result reported from <br>multiple planned in the protocol_
+
+]
+
+__Selective non-reporting__ (ROB-ME):
+
+.center[
+
+_Trial not reported (and so missing from <br>review/meta-analysis) because P > 0.05_
+
+]
+
+???
+
+ROB-ME is beyond scope, but is available from riskofbias.info
+
+---
+
+## Bias in the selection of the reported result
+
+.tricolumn[
+.tricolhead[
+### Outcome
+]
+
+Depression
+
+]
+
+.tricolumn[
+.tricolhead[
+### Measure
+]
+BDI
+
+HAM-14
+
+HAM-17
+
+]
+
+.tricolumn[
+.tricolhead[
+### Analysis
+]
+
+Difference in mean change at 4 weeks
+
+Difference in mean change at 8 weeks
+
+Difference in mean change at 12 weeks
+
+]
+
+???
+
+Study planned multiple analyses, as per protocol paper
+
+---
+
+
+## Bias in the selection of the reported result
+
+.tricolumn[
+.tricolhead[
+### Outcome
+]
+
+**Depression**
+
+]
+
+.tricolumn[
+.tricolhead[
+### Measure
+]
+**BDI**
+
+HAM-14
+
+HAM-17
+
+]
+
+.tricolumn[
+.tricolhead[
+### Analysis
+]
+
+Difference in mean change at 4 weeks
+
+Difference in mean change at 8 weeks
+
+**Difference in mean change at 12 weeks**
+
+]
+
+???
+
+But only one is reported
+
+---
+
+## Bias in the selection of the reported result
+
+Selection of result, on the basis of __magnitude__, __direction__ or __P-value__ from:
+
+* Multiple __outcome measures__
+
+???
+
+Multiple scales, definition of an event, time points
+
+<hr>
+
+--
+
+* Multiple __analyses__
+
+???
+
+Adjusted vs unadjusted
+
+Different set of covairates
+
+Final values vs change scores
+
+Dichotmoisation/categorisation with different time points
+
+---
+
+## Identifiying bias in result selection
+
+Compare published paper with __dated__, __pre-specified__ protocol
+
+???
+
+Main way to assess this domain is to 
+
+Are outcome measures the same?
+
+Have analysis methods changed?
+
+Are changes explained? E.g. new cut-points for categorisation given distribution of the data
+
+Date-stamped aspect is import, prevents retrospective registration
+
+<hr>
+
+--
+
+If no protocol;
+
+* compare __"Methods"__ versus __"Results"__
+
+???
+
+
+
+--
+
+* Ensure consistency across __different reports__ of a study
+
+???
+
+
+
+--
+
+.box[
+__Important to gain access to all related documents, in order to get a full picture__
+]
+
+---
+
+class: middle
+
+![](../images/prelim2.jpg) 
+
+???
+
+List of possible evidence sources to look for
+
+---
+
 ## Signalling questions
 
 **5.1** Were the data that produced this result analysed in accordance with a pre-specified analysis plan that was finalized before unblinded outcome data were available for analysis?
 
 <br>
-Is the numerical result being assessed likely to have been selected, on the basis of the results, from ...
+*Is the numerical result being assessed likely to have been selected, on the basis of the results, from ...*
 
 **5.2** ... multiple eligible outcome measurements (e.g. scales, definitions, time points) within the outcome domain?
 
@@ -743,6 +976,94 @@ class: center, middle
 ## Domain 5 Algorithm
 
 ![](../images/algorithmd5.jpg)
+
+---
+
+class: inverse, middle, center
+
+# Overall RoB and <br> Integration into Synthesis
+
+---
+
+## Overall risk of bias
+
+.left-column[.g[__Low risk of bias__]]
+The study is judged to be at __low risk of bias__ for all domains _for this result_.
+
+.left-column[.sc[__Some concerns__]<br><br>]
+
+The study is judged to be at __some concerns__ in at least one domain _for this result_, and no domains are at high risk of bias
+
+.left-column[.r[__High risk of bias__<br><br><br><br><br>]]
+
+`#`1 - The study is judged to be at __high risk of bias__ in at least one domain _for this result_.<br>
+`#`2 - The study is judged to have __some concerns__ for multiple domains in a way that substantially lowers confidence _in this result_.
+
+---
+
+## Incorporating bias assessments in analyses
+
+__Cochrane Handbook, Chapter 7__:
+“ It is not appropriate to present analyses and interpretations while ignoring flaws identified during the assessment of risk of
+bias”
+
+--
+
+Suggested approaches:
+
+1) Restrict primary analysis to studies at low risk of bias 
+
+--
+
+2) Explore the impact of RoB
+
+--
+
+3) Present all studies and provide a narrative discussion 
+
+---
+
+## Restrict to studies at low risk-of-bias
+
+.pull-left[
+Use overall judgement to __filter__ studies
+
+Trade-off: __bias__ versus __precision__
+
+Sensitivity analysis __using all studies__ encouraged
+]
+
+.pull-right[
+
+![](../images/ROB2.png)
+
+]
+???
+
+What happens if biggest trial by far is at high risk of bias?
+
+---
+
+## Explore impact of risk of bias
+
+Explore bias as __source of heterogeneity__
+
+* Sub-group analyses
+
+* Meta-regression
+
+
+But be careful!
+
+* Low power
+
+* Difference in groups may not solely be due to bias
+
+???
+
+Problem is which result do you use
+
+May be other sources of bias
 
 ---
 
@@ -794,7 +1115,7 @@ However, here we presume that such edits were not made.
 
 --
 
-**Judgement:** There is indication of multiple analyses of the data, and the analysis method used for this outcome in the full trial report matches that in the design paper.
+**Judgement:** There is no indication of multiple analyses of the data, and the analysis method used for this outcome in the full trial report matches that in the design paper.
 
 ---
 
@@ -807,31 +1128,12 @@ Domain-level judgement: .g[**Low**]
 
 ---
 
-class: inverse, middle, center
+class: inverse, center, middle
 
-# Overall RoB and <br> Integration into Synthesis
-
----
-
-## Incorporating bias assessments in analyses
+# Demo of Excel visualisation option
 
 
-“ It is not appropriate to present analyses and interpretations while ignoring flaws identified during the assessment of risk of
-bias”
 
-???
 
-__Cochrane Handbook, Chapter 7__
 
---
-
-Suggested approaches:
-
-1) Primary analysis restricted to studies at low risk of bias (or low + some concerns)
-
-2) Present multiple (stratified) analyses / Explore the impact of RoB
-
-3) Present all studies and provide a narrative discussion 
-
----
 
