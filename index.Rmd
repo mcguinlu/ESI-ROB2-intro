@@ -1,0 +1,56 @@
+---
+title: "<div align=\"center\">Evidence Synthesis Ireland:<br>Introduction to Risk of Bias 2.0</div>"
+date: "<div align=\"center\"> 6th/7th July 2021 | Online | Facilitator: <a href='https://www.lukemcguinness.com'>Luke McGuinness</a></div> "
+output: 
+  html_document:
+    css: day1/custom.css
+---
+<br>
+
+## Welcome to the course! <img src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Hi.gif" width="29px">
+
+I am very much looking forward to meeting you all in early July!
+
+__Note that while there are no formal prerequisites for this course__, I would encourage you to familiarise yourself with the example RCT we will be using throughout (see the [Course Resources](#demo) section). There will be (limited) time to read the paper on the day, but doing so in advance will allow you to jump straight into applying the RoB2 tool.
+
+<hr>
+
+### Slides
+
+#### Day 1
+
+[Session slides](https://mcguinlu.github.io/ESI-ROB2-intro/day1/session1.html)
+
+<br>
+
+#### Day 2
+
+[Session slides](https://mcguinlu.github.io/ESI-ROB2-intro/day2/session2.html)
+
+<hr>
+### Course Resources
+
+#### Example RCT: The DEMO trial {#demo}
+
+Over the course of the two days, we will assess an example published RCT using the RoB 2 tool. Details of this trial, plus PDF versions of the trial protocol and resulting publication, are provided below.
+
+__Citation:__ Krogh, Jesper, Bengt Saltin, and Merete Nordentoft. "The DEMO trial: a randomized, parallel-group, observer-blinded clinical trial of strength versus aerobic versus relaxation training for patients with mild to moderate depression." _The Journal of Clinical Psychiatry_ 70.6 (2009): 790-800.
+
+[Protocol (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/DEMO_Protocol_Krogh_2007.pdf) | [Paper (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/DEMO_Trial_Krogh_2009.pdf) 
+
+<br>
+
+#### General resources
+
+[Course programme (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Intro_ESI_Programme.pdf)
+
+[RoB 2 Website](https://www.riskofbias.info/welcome/rob-2-0-tool)
+
+[RoB 2 Guidance Document (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Full_Guidance.pdf)
+
+[RoB 2 Cribsheet (PDF)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Cribsheet.pdf)
+
+[RoB 2 Template (Word)](https://mcguinlu.github.io/ESI-ROB2-intro/resources/RoB2_Template.docx)
+
+[RoB 2 Excel Tool](https://drive.google.com/uc?export=download&id=1s6YVjZd5RLDS7Aq8B6y8SrL2zZAOhrRa)
+

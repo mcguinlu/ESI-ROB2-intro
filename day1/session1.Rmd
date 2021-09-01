@@ -1,5 +1,5 @@
 ---
-title: "Introduction to ROB2:<br>Getting started & Domain 1"
+title: "Introduction to Risk of Bias 2"
 subtitle: "Luke McGuinness"
 author: "Twitter: @mcguinlu"
 institute: "Department of Population Health Sciences, <br> Bristol Medical School"
@@ -33,24 +33,90 @@ library(medrxivr)
 cache <- TRUE
 library(dplyr)
 xaringanExtra::use_xaringan_extra(c("tile_view", "webcam"))
-xaringanExtra::use_logo(
-  image_url = "https://raw.githubusercontent.com/ropensci/medrxivr/master/man/figures/hex-medrxivr.png",
-  link_url = "https://github.com/ropensci/medrxivr",
-  position = xaringanExtra::css_position(top = "1em", right = "1em")
-)
+xaringanExtra::use_editable(expires = 1)
 ```
 
-## Overview
+class: large
 
-2 x $\frac{1}{2}$ days (today and tomorrow)
+## Overview of this course
 
-Session followed by practical
+2 x $\frac{1}{2}$ days 
+
+???
+
+__Don't forget to introduce yourself__
+
+* NIHR DRF/PhD Student
+* Working in BARR wiht Julian Higgins
+* Presented previous webinar on this tool and asked back
+* Work mainly on incorporoate of RoB into analyses
+
+(today and tomorrow)
+
+--
+
+General structure
+
+???
+
+Session introducing domain, followed by practical to apply it
+
+--
+
+Materials: __https://mcguinlu.github.io/ESI-ROB2-intro/__
+
+???
+
+Slides for today available now
+
+Cover how to download - any issues let me know.
+
+--
+
+Questions & Thumbs
+
+???
+
+Question breaks built into the sessions 
 
 Please add questions to the chat - will take breaks to answer them
 
+---
 
+# Acknowledgements/Declarations
+
+.small[
+Slides based in part on training delivered by: Julian Higgins, Jonathan Sterne, Jelena Savović, Matthew Page, Asbjørn Hróbjartsson, Isabelle Boutron, Theresa Moore & Alexandra McAleenan
+
+I am supported by an National Institute for Health Research (NIHR; https://www.nihr.ac.uk/) Doctoral Research Fellowship (DRF-2018-11-ST2-048).
+
+ROB2 development supported by the MRC Network of Hubs for Trials Methodology Research (MR/L004933/1- N61). Infrastructure support was provided by the Medical Research Council ConDuCT-II Hub (Collaboration and innovation for Difficult and Complex randomized controlled Trials In Invasive procedures – MR/K025643/1).
+]
+
+???
+
+MRC and NIHR as relevant funders
 
 ---
+
+# ROB2 Core Group
+.small[
+__Core group:__ Julian Higgins, Jonathan Sterne, Jelena Savović, Matthew Page, Asbjørn Hróbjartsson, Isabelle Boutron, Barney Reeves, Roy Elbers
+
+__Contributors:__ Natalie Blencowe, Marion Campbell, Mike Campbell, Christopher Cates, Vincent Cheng, Rachel Churchill, Mark Corbett, Nicky Cullum, Francois Curtin, Amy Drahota, Sandra Eldridge, Jonathan Emberson, Bruno Giraudeau, Jeremy Grimshaw, Miguel Hernán, Sally Hopewell, Daniela Junqueira, Peter Jüni, Jamie Kirkham, Toby Lasserson, Tianjing Li, Alexandra McAleenan, Stephen Senn, Sasha Shepperd, Ian Shrier, Nandi Siegfried, Lesley Stewart, Kate Tilling, Ian White, Penny Whiting
+
+__Further acknowledgements:__ Doug Altman, Henning Keinke Andersen, Mike Clarke, Jon Deeks, Sharea Ijaz, Geraldine MacDonald, Richard Morris, Mona Nasser, Nishith Patel, Jani Ruotsalainen, Holger Schünemann, Jayne Tierney
+]
+
+???
+
+Huge number of people worked on this tool
+
+You'll note my name is not there
+
+---
+
+class: large
 
 ## What this course will enable you to do
 
@@ -76,6 +142,8 @@ class: inverse, center, middle
 
 A __systematic error__, or deviation from the truth, in results
 
+--
+
 Bias is <u>__not__</u> the same as:
 
 .tricolumn[
@@ -88,6 +156,12 @@ Random error due to sampling variation
 Reflected in the confidence interval
 ]
 ]
+
+???
+
+Imprecision refers to random error. Each time trialists take a sample and measure outcomes, they will get natural variation from the ‘true’ values in the whole population. 
+The smaller the sample, the more variability. Imprecision is reflected in the confidence interval around the treatment effect. 
+<hr>
 
 --
 
@@ -102,6 +176,15 @@ Not all methodological <br>flaws introduce bias
 ]
 ]
 
+???
+
+Bias is not the same as quality in study conduct:  The RoB team moved substantially away from methods found in other tools – which often assess – methodological quality” of the trial – or “did the trialists do the best they can do..?” 
+Whereas… Bias focuses on “Do I believe the result?”
+
+Also not all markers of “poor conduct” in trials are relevant to bias. For example, failure to perform a sample size calculation, or to obtain ethical approval, are important markers of study quality, but they are unlikely to have direct implications for risk of  bias.
+
+<hr>
+
 --
 
 .tricolumn[
@@ -115,36 +198,62 @@ Good methods may have been used but not well reported
 
 ???
 
-The RoB2 tool (and RoB1 tool before it) both seek to measure bias. 
-Other tools assessing trials for systematic reviews frequently assess issues related to imprecision, quality and reporting. 
-
-The team that  developed the RoB2 tool are seeking to assess only bias or “Systematic error”
-
- Imprecision refers to random error. Each time trialists take a sample and measure outcomes, they will get natural variation from the ‘true’ values in the whole population. 
-The smaller the sample, the more variability. Imprecision is reflected in the confidence interval around the treatment effect. 
-
-Bias is not the same as quality in study conduct:  The RoB team moved substantially away from methods found in other tools – which often assess – methodological quality” of the trial – or “did the trialists do the best they can do..?” 
-Whereas… Bias focuses on “Do I believe the result?”
-The terms “Quality” and “bias” are often used interchangeably, but we are more interested in the believability of the result than criticising the efforts made by study authors. 
-Even a well conducted study can be at risk of bias, for example, in studies where it’s difficult to blind participants and trial personnel - such as  surgical trials – the study may be conducted very well – have “high quality” - but we still acknowledge the possibility that the lack of blinding might affect the study results. 
-
-Also not all markers of “poor conduct” in trials are relevant to bias. For example, failure to perform a sample size calculation, or to obtain ethical approval, are important markers of study quality, but they are unlikely to have direct implications for risk of  bias.
-
-And 
 Bias is not the same as the quality of reporting
 Studies rarely have space to report the methods used in exhaustive detail and may often have used rigorous methods even if they are not described in the published paper. 
 
 Reporting is improving with initiatives like the CONSORT statement. It is important not to discriminate against older trials that were published before these initiatives, and for us to be clear- in our  assessments of bias - in these trials – whether our decisions are based on methods reported in the paper, and when the details are not reported in the trial.. .some tools to assess trials for RCTs have confused these issues
 
 ---
+class: center, middle
 
-## Problems with existing tool
 
-Used simplistically & inconsistently
+.larger[__Bias__]
 
-Modest agreement rates between assessors
+wrong answer to the right question
 
-No overall risk of bias judgement
+
+
+.largest[
+$\neq$
+]
+
+
+
+.larger[__Generalisability / Indirectness__]
+
+right answer to the wrong question 
+
+
+???
+
+Bias also not the same as concerns re generalisability
+
+Indirectness = just because you are not studying the population of interest, doesn't mean the answer is biased.
+
+---
+
+# Cochrane Risk of Bias tool (RoB 1)
+
+.pull-left[
+![](../images/ROB1picture2.png)
+]
+.pull-right[
+
+![](../images/ROB1picture.png)
+]
+
+???
+
+The first ROB tool was developed and published in 2008 with revisions in 2011 
+
+It has been used by 100% of Cochrane reviews of interventions since 2014
+
+
+---
+
+## Problems with existing tool (RoB 1)
+
+Used __simplistically__ & __inconsistently__
 
 ???
 
@@ -152,12 +261,34 @@ __1__ Guidance not followed, and domains added or removed
 
 <hr>
 
+--
+
+Modest __agreement rates__ between assessors
+
+???
+
 __2__ This was partly influence by the overuse of the unclear judgement, which was itself ambiguous.
 
 Can provide references for this if you want
 <hr>
 
-__3__ Problematic if you want to carry result of forward, which we will explore tomorrow afternoon (__SIGNPOST__)
+--
+
+Issues around __unblinded trials__
+
+???
+
+__3__ Issues with the domain of blinding with users assuming that no blinding meant high risk of bias – which was not what the team had intended and was not  in the guidance.
+
+<hr>
+
+--
+
+No __overall__ risk-of-bias judgement
+
+???
+
+__4__ Problematic if you want to carry result of forward for sensitivity analyses/etc. , which we will explore tomorrow afternoon (__SIGNPOST__)
 
 ---
 
@@ -179,7 +310,7 @@ versions appropriate to cluster-randomized trials, cross-over trials
 <br>
 ???
 ???
-__2__
+__2__ 
 clearer guidance, in-built help in reaching judgements
 <hr>
 
@@ -190,6 +321,7 @@ clearer guidance, in-built help in reaching judgements
 ???
 __3__
 incorporates developments in the science (particularly missing data, unblinded trials)
+<hr>
 
 --
 
@@ -210,6 +342,10 @@ class: inverse, center, middle
 
 ---
 
+## RoB2 assess risk of bias
+
+---
+
 ## RoB2 is a result-focused tool
 
 It assesses a __single outcome__ at a __single timepoint__
@@ -221,6 +357,10 @@ Essentially assessing a single numerical result chosen
 
 
 More specific than study/outcome based
+
+
+This approach is taken because biases in a study could act unequally across the study.
+
 
 --
 
@@ -259,21 +399,61 @@ Beck's Depression<br>Inventory
 
 ## Bias in randomised trials
 
-__Hold for diagram__
+![](../images/domains_overview_no_rob.png)
 
 ???
 
-__Note:__ for the purposes of this course, we will be focusing on standard RCTS (rather than cluster or other RCTs)
+Bias introduced through conduct/dissemination of results
+
+These aspects are based on empirical research and theory
+
+May be familiar, but worth checking how they are defined within the RoB 2 tool
+
+__Note:__ Only for RCTs - for non-randomised studies, check ROBINS-I
+
+__Note:__ for the purposes of this course, we will be focusing on standard RCTS (rather than cluster or other RCTs).
+
+There are additional issues in cross-over trials and cluster-randomized trials, and different versions of RoB 2 have been developed for these designs.
+
+
+---
+
+## Bias in randomised trials
+
+![](../images/domains_overview.png)
+
+???
+
+Domains map onto the elements or domains of bias
 
 ---
 
 ## Domains
 
+Fixed set of __five__ domains
+
+???
+
+__1.__ Rather than a score or checklist, Cochrane Reviews assess the risk of bias in results of included studies using a domain-based approach. 
+
+--
+
 All domains are __mandatory__
 
-Additional domains (e.g. "other biases") should not be added
+--
+
+Additional domains (e.g. "other biases") __should not be added__
+
+--
 
 Issues around __funding/COIs __are handled elsewhere
+
+???
+
+__4.__ See TACIT (Tool for Addressing Conflicts of Interest in Trials)
+However, the impact of the conflicts on bias in a trial result will operate through one of the fixed domains of the RoB 2 tool.]
+
+--
 
 __Reporting biases__ handled elsewhere e.g. ROB-ME
 
@@ -285,23 +465,79 @@ Reasonably factual __signalling questions__ aim to facilitate judgements and inc
 
 ???
 
-Authors encouraged to record rationale and direct quotes
+**Example:** Q1.1 - Was the allocation sequence random?
 
 --
 
 Possible responses: .g[‘__Yes__’], .g[‘__Probably yes__’], .r[‘__Probably no__’], .r[‘__No__’], ‘__No information__’
+]
+
+Authors encouraged to record __rationale__ and __direct quotes__
+
+???
+
+Helps transparency and in resolving discrepancies
+
+---
+
+![](../images/tooloverall.png){width=50%}
+
+???
+
+Here is the entire tool – not for reading but just so you get an idea of the size. 
+
+There are in total twenty-three (23) signalling questions across the 5 domains 
+
+But due to conditional questioning, you may not have to answer all 23. 
+
+A key example is Domain 3 – “Bias due to Missing Outcome Data”
+
+If you answer “Yes/Probably Yes” to the first signalling questions – “Were data for this outcome available for all, or nearly all, participants randomised?” – you do not need to answer any further questions.
+
+
+---
+
+## Domain-level judgements
+
+Possible judgements:
+* .g[‘Low risk of bias’]
+* ‘Some concerns’
+* .r[‘High risk of bias’]
+
+???
 
 --
 
-__Signalling questions -> domain-level risk of bias judgements__
+__Algorithms__ provided suggested domain-level judgements
 
-‘Low risk of bias’ - ‘Some concerns’ - ‘High risk of bias’
+???
+
+Based on responses to signalling questions. Example of these on the next slide
+
+--
+
+Suggested risk-of-bias judgements __can be over-ridden__
+
+
+---
+
+## Example domain-level algorithm
+
+![](../images/d1algorithm.png)
+???
+
+Domain 1 has three SQ
+
+Answers guide you to domain-level judgement
+
+Note: "No information" is incorporated as a judgement
+
 
 ---
 
 ## Overall risk of bias
 
-.left-column[__Low risk of bias__]
+.left-column[.g[__Low risk of bias__]]
 The study is judged to be at __low risk of bias__ for all domains _for this result_.
 
 ???
@@ -310,13 +546,13 @@ Overall risk of bias judgement follows from the domain-level judgements (can be 
 
 --
 
-.left-column[__Some concerns__<br><br>]
+.left-column[.sc[__Some concerns__]<br><br>]
 
 The study is judged to be at __some concerns__ in at least one domain _for this result_, and no domains are at high risk of bias
 
 
 --
-.left-column[__High risk of bias__<br><br><br><br><br>]
+.left-column[.r[__High risk of bias__<br><br><br><br><br>]]
 
 `#`1 - The study is judged to be at __high risk of bias__ in at least one domain _for this result_.<br>
 --
@@ -324,19 +560,176 @@ The study is judged to be at __some concerns__ in at least one domain _for this 
 
 ???
 
-__SIGNPOST:__ When I say there are two ways to get there, I talking about the algorithms that we use to go from domain level judgements to overall judgements.p
+__SIGNPOST:__ When I say there are two ways to get there, I talking about the algorithms that we use to go from domain level judgements to overall judgements
 
 ---
 
-## Preliminary considerations
+class: large
 
-Hold for two images
+# Resources
+
+[riskofbias.info](https://www.riskofbias.info)
+
+???
+
+Linked from course website
+
+--
+
+Cochrane Handbook - Chapter __7__ & __8__
+
+--
+
+Templates:
+* Word template
+* Excel tool (___recommended___)
+* Online software (_coming soon_)
+
+???
+
+Recommend doing the practical exercises in Excel template - may need to enable macros
+
+Available from course website
+
+---
+
+class: middle, center
+
+.pull-left[ ![](../images/questions.jpg) ]
+
+.pull-right[
+<br>
+<br>
+<br>
+.largest[__Questions?__]
+]
+
+---
+
+class: inverse, center, middle
+
+# Preliminary considerations
+
+---
+
+![](../images/prelim1.jpg)
+
+??? 
+
+Before we begin perform the assessment, there are some initial considerations to complete.
+
+There are three versions of the tool :
+Individually randomised, 
+Cluster randomised, and 
+Individually randomised cross-over
+We then need to define our comparison, especially important in multi-arm trials
+
+We specify the outcome we are looking at, and then the specific numeric result.
+
+This helps us avoid ambiguity when performing the assessment
+
+And finally, we state which effect of interest we are looking at, either:
+effect of assignment to intervention vs 
+effect of adhering to intervention
+
+
+---
+
+class: middle
+
+![](../images/prelim2.jpg) 
+
+???
+
+The tool asks us to state what type of documents we are using to perform the assessment 
+
+E.g. journal articles, protocol, or conference abstracts
 
 ---
 
 class: inverse, center, middle
 
 # Domain 1: Bias arising from the randomisation process 
+
+---
+class: center, middle
+
+![](../images/domains_overview_d1.png)
+
+---
+
+# Why is randomization important?
+
+Bias introduced when **factors that influence the outcome** predict:
+
+.pull-left[
+
+
+.center[__Enrolment__]
+
+<br>
+
+![](../images/d1_enrol.png)
+]
+
+???
+
+Factors could be severity of illness or presence of comorbidites
+
+Knowledge of the next assignment could lead to people being excluded on the basis of factors
+
+<hr>
+
+--
+
+.pull-right[
+.center[__Allocation__]
+
+<br>
+
+
+![](../images/d1_alloc.png)
+]
+
+
+???
+
+Essentially looking for two groups that "look the same at baseline", which means people 
+
+Re-introducing confounding, where a characteristic of the patient predicts their treatment and outcome
+
+The enrolment here is a type of selection bias
+
+while the a
+
+---
+
+<!-- TODO Check spelling of randomisation throughout -->
+
+
+# Randomization: two-step process
+
+<br>
+
+.larger[
+__Generate__ an unbiased allocation sequence
+]
+
+<br>
+
+???
+
+* Good: computer algorithm, random tables
+* Not so good: random numbers, dates, patient records numbers
+
+--
+
+.larger[
+__Conceal__ the allocation sequence
+]
+???
+* Good: Central randomisation, sequentially numbered opaque envelopes/drug containers
+* Not so good: transparent envelopes/containers
 
 ---
 
@@ -353,5 +746,684 @@ __1.2__ Was the allocation sequence concealed until participants were enrolled a
 
 __1.3__ Did baseline differences between intervention groups suggest a problem with the randomization process?
 
+---
+
+## Domain 1 algorithm
+
+![](../images/d1algorithm.png)
+
+???
+
+Start with Q1.2. to "fail fast"
+
+Q 1.3 present in two places to provide info on each path
+
+---
+
+## Why look for baseline imbalances?
+
+.footer[_Ranapurwala et al. (2016) doi:10.1093/ije/dyv292_]
+
+Assessing impact of pre-dive checklist on scuba diving incidents
+
+???
+
+Trial assessing effect of pre-dive checklist on scuba diving accidents
+
+--
+
+.pull-left[__Methods:__ "...the interns were only allowed to allocate the envelopes in a predetermined randomized order. They did not know which envelope was intervention or control until they opened it on subsequent recruitment days."]
+
+???
+
+__PAUSE HERE - ask if this sounds reasonable!__
+
+--
+
+.pull-right[![](../images/d1_baseline.png)]
+
+???
+
+Sometimes methods described are good, but results show that there was a problem
+
+Purpose of the extra question is the assess this.
+
+---
+
+# Baseline imbalances
+
+Can __occasionally__ indicate problems with randomisation
+
+* Major differences between __group sizes__
+
+* __Excess__ of statistically significant baseline differences
+
+--
+
+.box[
+Baseline imbalances __consistent with chance__ do<br> not indicate problems with randomisation
+]
+
+---
+
+.box[
+If 20 variables were measured at baseline, would you expect at least one variable to have an imbalance resulting in a P-value < 0.05?
+]
+
+--
+
+<br>
+
+.left-column[![](../images/tick.png)]
+
+.larger[__Yes__, assuming the variables are not correlated, we expect 1 in 20 tests to give a P-value < 0.05
+]
+
+???
+
+Important to remember this, as often studies report a lot of baseline comparisons.
+
+---
+
+class: middle, center
+
+.pull-left[ ![](../images/questions.jpg) ]
+
+.pull-right[
+<br>
+<br>
+<br>
+.largest[__Questions?__]
+]
+
+---
+
+class: middle, inverse, center
+
+# Example RCT
+
+---
+
+## The DEMO trial
+
+.small[A Randomized, Parallel-Group, Observer-Blinded Clinical Trial of Strength Versus Aerobic Versus Relaxation Training for Patients With Mild to Moderate Depression]
+
+__P:__ Patients with mild to moderate depression  
+__I:__  4 months of aerobic OR strength training   
+__C:__ 4 months of relaxation training  
+__O:__ Depressive symptoms, Absence from work, Cognitive function, Physical outcomes
+
+.footer[*Krogh et al. (2009) doi: 10.4088/jcp.08m04241*]
+
+???
+
+Outcome and comparator were delivered twice weekly
+
+---
+
+## Result to assess
+
+__Comparison:__ Aerobic training vs relaxation
+
+__Outcome:__ Change in Beck depression Inventory
+
+__Time point:__ 4 weeks
+
+__Numerical result:__ Mean difference 0.4 (95% CI: -4.4 to 5.2)
+
+<br>
+
+.center[
+See last column, third row in Table 2
+]
+
+???
+
+Detail which is experiment vs comparator
+
+---
+
+class: inverse, middle, center
+
+# Suggested reponses for Domain 1
+
+---
+
+## Q 1.1 Was the allocation sequence random?
 
 
+--
+
+**Response:** .g[__Yes__]
+
+--
+
+**Justification:** “Randomization was centralized and stratified according to medicine status” 
+
+---
+
+## Q 1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?
+
+--
+
+**Response:** .g[__Yes__]
+
+--
+
+**Justification:** "DEMO trial staff contacted the Copenhagen Trial Unit (CTU) by phone. Randomization was carried out by the CTU using computerized restricted randomization with a block size of 6. The block size and thus the allocation sequence were unknown to the DEMO trial staff.”
+
+---
+
+## Q 1.3 Did baseline differences between intervention groups suggest a problem with the randomization process? 
+
+--
+
+**Response:** .g[__Probably No__]
+
+--
+
+**Justification:** “At entry, the 3 groups looked balanced, although the HAM-D17 score was lower in the relaxation group, which also had a higher proportion of male participants.”
+
+Imbalances in Table 1, though small number of participants (n = 55)
+
+Compare Ham-17 vs BDI score
+
+???
+
+Ham-17 is higher in aerobic, but lower in BDI - therefore depression (or depressive symptoms) not necessarily more common in those assigned to aerobic group aerobic
+
+---
+
+class: center
+
+![](../images/d1algorithm.png)
+
+Suggested domain level judgement: .g[__Low__]
+
+???
+
+---
+
+class: inverse, center, middle
+
+# Domain 2: Bias due to deviations from intended interventions
+
+---
+class: center, middle
+
+![](../images/domains_overview_d2.png)
+
+---
+
+## Effect of interest
+
+
+Two distinct effects of interest:  
+* Intention to treat effect: __effect of assignment to intervention__  
+* Per protocol effect: __effect of adhering to intervention__
+
+--
+
+<br>
+
+Focus of today is __effect of assignment to intervention__ (_more common_)
+
+???
+
+Before we dive into the Domain proper, I want to just recap on the two effects of interest that reviews authors will be trying to assess.
+
+Taking for example a randomised controlled trial of a screening programme:
+
+Effect of assignment to intervention or the Intention to Treat Effect
+* is the effect of assignment to screening at baseline regardless of whether participants actually attended screening
+* This could be the question of interest to a policy maker who wants to know whether to introduce a screening programme at the population level
+
+Alternatively, the Effect of adhering to intervention or the Per protocol effect
+* is the effect of actually attending screening once invited
+* This could be the question of interest to an individual about whether to attend screening
+
+Estimates of these effects will differ if patients __do not receive__ assigned intervention or __deviate from__ assigned intervention after baseline
+
+---
+
+## Domain 2 Signalling Questions
+
+Different set of signalling questions when assessing each effect of interest
+
+In the preliminary considerations, review authors should select the effect of interest
+
+<br>
+
+.center[![](../images/effectprelim.png)]
+
+???
+
+This is particularly important for ROB2, as the tool has a different set of Signalling Questions depending on the effect of interest. 
+
+Assessors are asked to specify the effect of interest during the preliminary considerations section of the tool.
+
+---
+
+## Domain 2 Signalling questions
+
+Three elements in this domain:
+
+1. __Deviations__ from intended interventions
+
+1. __Blinding__ of trial participants/personnel 
+
+1. __Appropriate analysis__ for effect of interest
+
+
+---
+
+## Element 1: Deviations from intended interventions
+
+Deviations from intended interventions can be caused by:
+* Administration of additional interventions that are inconsistent with the trial protocol (non-protocol interventions)
+* Failure to implement the protocol interventions as intended
+* Non-adherence to assigned intervention by trial participants
+
+
+???
+
+First domain is ... which is what the domain is called.
+
+Changes to intervention that are consistent with the trial protocol do not cause bias, and should not be considered to be deviations from intended intervention.
+
+Caused by:
+* Non-protocol interventions that trial participants might receive during trial follow up and that are likely to affect the outcome of interest 
+* Poor implementation of the intended intervention 
+* Non-adherence to intended intervention
+
+For non-protocol interventions, authors would ideally specify these in the review protocol.
+
+<hr>
+
+However, protocol-consistent deviations are not consider to cause bias.
+
+__For example,__ in a trial comparing surgical intervention with conservative management of stable angina, if participants who progress to unstable angina receive surgical intervention, this is considered to be in line with the trial protocol.
+
+Problem is that protocols often do not specify deviations that are acceptable. 
+
+In terms of implementation, if possible, review authors should specify potential non-protocol interventions at review protocol writing stage.
+
+---
+
+## Element 1: Deviations from intended interventions
+
+Deviations from intended interventions __are not important__ when interest is in the effect of assignment to intervention 
+
+???
+
+Deviations are not important when assessing the effect of assignment to intervention:
+
+* Some people don’t respond to invitations to be screened
+* Some people do not adhere to their assigned intervention
+
+When looking at effect of assignment, don't care what people do once they are assigned to a group, just want to 
+
+Deviations are not important when assessing the effect of assignment to intervention:
+
+Some people don’t respond to invitations to be screened
+Some people do not adhere to their assigned intervention
+
+<hr>
+
+--
+
+. . . provided these deviations __did not arise__ because of the trial context
+
+
+???
+
+__Caveat:__ this is only true once the deviations did not arise because of the trial context.
+
+As an example of deviations due to trial context, in an unblinded study, the process of securing informed consent may lead participants subsequently assigned to the comparator group to feel unlucky and therefore seek the experimental intervention or other interventions.
+
+
+--
+
+However, deviations from intended intervention __may lead to bias__ in the effect of adhering to intervention.
+
+???
+
+So to reiterate, deviations from intervention that do not arise because of the trial context, such as a patient’s choice to stop taking their assigned medication, do not lead to bias in the intention-to-treat effect, but may bias the effect of adhering to intervention.
+
+
+This demonstrates the need for two sets of signalling questions.
+
+---
+
+## Element 2: Role of blinding
+
+
+For both effects, RoB2 assumes that when participants and trial personnel were blinded, deviations from intended interventions __are not influenced by the trial context and so do not cause bias__
+
+--
+
+Blinding of outcome assessors is considered separately, in the ‘Bias in measurement of outcomes’ domain
+
+--
+
+However, need to remember that blinding may not be successful in practice
+
+---
+
+## Element 3a: Appropriate analysis for effect of assignment
+
+To estimate the effect of assignment to intervention, we should use an ‘intention-to-treat’ (ITT) analysis:
+
+* analyse participants in the intervention groups they were randomized to, regardless of the intervention received;
+
+* include all randomized participants in the analysis, which requires measuring outcome data on all participants.
+
+???
+
+So the last element is whether the study used the analysis method appropriate for the effect of interest. 
+
+For the effect of assignment to intervention, an intention to treat analysis should be used. 
+
+All patients are included and are analysed in the group they were assigned to 
+
+An ITT analysis maintains the benefit of randomization: that the intervention groups do not differ systematically with respect to measured or unmeasured prognostic factors
+
+Some problems:
+* In a blinded, placebo-controlled trial with non-adherence to interventions, an ITT analysis is expected to underestimate the effect that would have been seen if all participants had adhered
+
+* The ITT effect may overestimate the per-protocol effect in trials comparing two or more active interventions, which is problematic for non-inferiority or equivalence studies or for estimating harms
+
+---
+
+![](../images/cap_paper.png)
+???
+
+As an example, consider the CAP trial, examining the effect of Low-Intensity PSA-Based Screening on prostate cancer mortality
+
+---
+
+background-image: url("../images/cap1.png")
+background-size: contain
+
+???
+
+So under an intention to treat analysis, 
+
+We include all patients invited for screening in the intervention group, regardless of whether they attended screening or not. 
+
+Rate ratio of 0.99 – no difference between the groups.
+
+This is a relatively straightforward analyses.
+
+---
+
+## Element 3b: Appropriate analysis for effect of assignment
+
+Two commonly used approaches to estimate effect of adherence __may be seriously biased__:
+
+* naïve __‘per protocol’__ analyses restricted to individuals in each group who started and adhered to the interventions;
+
+* __‘as-treated’__ analyses: participants analysed according to the intervention received, even if their randomized allocation was to a different treatment group.
+
+---
+
+background-image: url("../images/cap2.png")
+background-size: contain
+
+???
+
+Again using the CAP trial as an example, we can see how limiting to those who actually received the intended intervention – a per protocol analysis - provides a biased result.
+
+Say we split the intervention group into two sub-groups:
+
+* Those who, when invited for screening, actually attended their screening appointment (green line) and
+
+* Those who, when invited, did not attend.
+
+If we compare only the Attenders with the Control group (blue line), we would get a rate ratio of 0.68 and strong evidence of a substantial reduction in mortality.
+
+---
+
+background-image: url("../images/cap3.png")
+background-size: contain
+
+???
+
+However, there are likely to be systematic differences between attenders and non-attenders (show here in the purple line), negating the benefits of randomisation.
+
+Under this analysis, 
+
+accepting that attending screening following receipt of an invitation reduces mortality
+
+also means 
+
+accepting that simply not attending screening following receipt of an invitation increases mortality (as shown in the purple line), which doesn’t make sense.
+
+---
+
+# Estimating per-protocol effects
+<br>
+
+.center[
+![](../images/pragmatic_paper.png)]
+
+???
+
+Important to remember that while the per protocol analysis may produce biased results, looking at the per protocol effect is valid research question, once it is estimated correctly.
+
+Describing how to appropriately estimate the per-protocol effect is beyond the scope of this webinar, but 
+
+If you are interested, we recommend the Hernan and Robins paper in the New England Journal of Medicine on the Per protocol Analysis of Pragmatic Trials
+
+
+---
+
+???
+
+So under an intention to treat analysis, 
+
+We include all patients invited for screening in the intervention group, regardless of whether they attended screening or not. 
+
+Rate ratio of 0.99 – no difference between the groups.
+
+This is a relatively straightforward analyses.
+
+---
+
+## Signalling questions: Blinding
+
+**2.1** Were participants aware of their assigned intervention during the trial?
+
+**2.2** Were carers and people delivering the interventions aware of participants' assigned intervention during the trial??
+
+???
+
+Note that these signalling questions are the "effect of assignment" set - for more guidance on the "effect of adherence" set, see the cribsheet on the course website.
+
+---
+
+## Signalling questions: Deviations
+
+**2.3** If .r[__Y__]/.r[__PY__]/__NI__ to 2.1 or 2.2: Were there deviations from the intended intervention that arose because of the trial context?
+
+
+???
+
+Remember, if blinding is not an issue in effect of assignment trials, then risk of bias will be low.
+
+In this case, deviations will not have arisen from the trial context.
+
+<hr>
+
+--
+
+**2.4** If .r[__Y__]/.r[__PY__]/__NI__ to 2.3, Were these deviations likely to have affected the outcome?
+
+???
+
+Changes from assigned intervention that are inconsistent with the trial protocol and arose because of the trial context will impact on the intervention effect estimate if they affect the outcome, but not
+otherwise
+
+<hr>
+
+--
+
+**2.5** If .r[__Y__]/.r[__PY__]/__NI__ to 2.4, were these deviations from intended intervention balanced between groups?
+
+???
+
+Changes from assigned intervention that are inconsistent with the trial protocol and arose because of the trial context are more likely to impact on the intervention effect estimate if they are not balanced between the intervention groups.
+
+---
+
+# Signalling questions: Appropriate analysis
+
+**2.6** Was an appropriate
+analysis used to estimate
+the effect of assignment
+to intervention?
+
+???
+
+Both intention-to-treat (ITT) analyses and modified intention-to-treat (mITT) analyses excluding participants with missing outcome data should be considered appropriate.
+
+Both naïve ‘per-protocol’ analyses (excluding trial participants who did not receive their assigned intervention) and ‘as treated’ analyses (in which trial participants are grouped according to the intervention that they received, rather than according to their assigned intervention) should be considered inappropriate.
+
+<hr>
+
+--
+
+**2.7** If .r[__N__]/.r[__PN__]/__NI__ to 2.4, was there potential for a
+substantial impact (on
+the result) of the failure
+to analyse participants in
+the group to which they
+were randomized?
+
+???
+
+This question addresses whether the number of participants who were analysed in the wrong intervention group, or excluded from the analysis, was sufficient that there could have been a substantial impact on the result. 
+
+It is not possible to specify a precise rule: there may be potential for substantial
+impact even if fewer than 5% of participants were analysed in the wrong group or excluded, if the outcome is rare or if exclusions are strongly related to prognostic factors.
+
+---
+
+# Domain 2 Algorithm: Part 1 & 2
+
+![](../images/algorithmd2_part1.jpg)
+
+---
+
+# Domain 2 Algorithm: Part 3
+
+<br>
+
+![](../images/algorithmd2_part2.jpg)
+
+---
+
+class: inverse, middle, center
+
+# Suggested reponses for Domain 2 <br>
+
+---
+
+## Q 2.1: Were participants aware of their assigned intervention during the trial?
+
+--
+
+**Response:** .r[**Yes**] 
+
+--
+
+**Justification:** Interventions could not be blinded to participants or therapists, as they were aerobic exercise and relaxation.
+
+
+---
+
+## Q 2.2: Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?
+
+--
+
+**Response:** .r[**Yes**]
+
+--
+
+**Justification:** Interventions could not be blinded to participants or therapists, as they were aerobic exercise and relaxation.
+
+Stated in paper: “Physiotherapists were not blinded”
+
+---
+
+## Q 2.3 If .r[Y/PY]/NI to 2.1 or 2.2: Were there deviations from the intended intervention that arose because of the trial context?
+
+--
+
+**Response:** .g[**Probably No**]
+
+--
+
+**Justification:** High proportion of relaxation group did not attend (11/55) while only one aerobic did not attend but ***I*** think this might be compatible with regular practice.
+
+VO2 max much higher in aerobic group
+
+???
+
+**I have highlighted the "I" in this section to show you can legitimately disagree with me!**
+
+A high proportion of people who were randomized to the relaxation group did not attend any sessions (11/55). This contrasts with the aerobic training group, where only 1 person never participated. It may be that in a non-trial situation, a similar proportion of people would not attend aerobic sessions as not attend relaxation settings. However, our judgement is that it is quite plausible that attendance at relaxation sessions would be lower than at aerobic sessions, so we think that what happened in the trial reflects what would happen in regular practice. 
+
+VO2 max (a measure of aerobic capacity) increased much more in the aerobic group than the relaxation group, suggesting that the relaxation group did not seek additional aerobic exercise outside of the trial (which they might have done had they been disappointed with their allocation).
+
+---
+
+class: middle, center
+
+## Q 2.4 & Q 2.5 <br> Don't need to answer, as answered .g[**PN**] to Q 2.3
+
+---
+
+## Q 2.6: Was an appropriate analysis used to estimate the effect of assignment to intervention?
+
+--
+
+**Response:** .g[**Y**]
+
+--
+
+**Justification:** Analysis was done “on the basis of the intention-to-treat principle, and all patients included were analyzed according to their original group assignment.”
+
+---
+
+class: middle, center
+
+## Q 2.7 <br> 
+Don't need to answer, as answered .g[**Y**] to Q 2.6
+
+---
+
+class: middle
+
+![](../images/algorithmd2_part1.jpg)
+
+.pull-left[.center[Part 1: .g[**Low**]]]
+
+--
+
+.pull-right[.center[Part 2: .g[**Low**]]]
+
+
+---
+
+class: center, middle
+
+.pull-left[.center[Part 1: .g[**Low**]]]
+
+.pull-right[.center[Part 2: .g[**Low**]]]
+
+<br>
+
+![](../images/algorithmd2_part2.jpg)
+
+Domain-level judgement: .g[**Low**]
